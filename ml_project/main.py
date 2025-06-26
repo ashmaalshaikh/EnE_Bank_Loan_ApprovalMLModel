@@ -7,7 +7,8 @@ from src.predict import predict
 import numpy as np
 
 def main():
-    df = load_data("C:\EnE_Bank_Loan_ApprovalMLModel\ml_project\data\loan_data.csv")
+    url = 'https://raw.githubusercontent.com/ashmaalshaikh/EnE_Bank_Loan_ApprovalMLModel/refs/heads/main/ml_project/data/loan_data.csv'
+    df = load_data(url)
     (X_train, X_test, y_train, y_test), scaler = preprocess_data(df)
     
     model = build_model()
